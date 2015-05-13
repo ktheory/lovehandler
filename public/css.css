@@ -1,0 +1,10 @@
+body {
+  font-family: 'Comic Sans', 'Marker Felt';
+  background-image: url(bg2.jpg);
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 600%;
+}
