@@ -7,11 +7,13 @@ class Lovehandler < Sinatra::Base
   LAST = File.readlines(dir + '/last.txt').map(&:chomp).each{|word| word[0] = word[0].upcase}
 
   get '/' do
-    @name = [
-      FIRST[rand(FIRST.size)],
-      rand(4) != 0 ? MIDDLE[rand(MIDDLE.size)] : nil,
-      LAST[rand(LAST.size)]
-    ].compact.join(" ")
+    @names = 5.times.map {
+      [
+        FIRST[rand(FIRST.size)],
+        rand(4) != 0 ? MIDDLE[rand(MIDDLE.size)] : nil,
+        LAST[rand(LAST.size)]
+      ].compact.join(" ")
+    }
 
     haml :index
   end

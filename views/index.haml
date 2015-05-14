@@ -4,6 +4,7 @@
     %title Lovehandler
     %link{href: 'css.css', rel: 'stylesheet'}
   %body
-    %h1= @name
+    - @names.each do |name|
+      %h1= name
     %h2#lovehandleit
-      %a{href: '/'} Lovehandle it.
+      %a{href: '/'} Lovehandle it!
