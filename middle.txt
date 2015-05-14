@@ -158,7 +158,6 @@ ping
 pirn
 plan
 pong
-porn
 pown
 pun
 pung
